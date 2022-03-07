@@ -1,6 +1,6 @@
 document.getElementById('error-message').style.display = 'none';
 document.getElementById('request-message').style.display = 'none';
-const searchFood = () => {
+const searchPhone = () => {
       const searchField = document.getElementById('search-field');
       const searchText = searchField.value;
       // clear data
@@ -39,17 +39,17 @@ const displaySearchResult = data => {
             // show no result found;
             displayError();
       }
-      data.forEach(meal => {
-            // console.log(meal);
+      data.forEach(phone => {
+            // console.log(phone);
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
         <div class="card h-100">
-            <img src="${meal.image}" class="card-img-top" alt="...">
+            <img src="${phone.image}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">${meal.phone_name}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">${meal.brand}</h6>
-                <p><a onclick="loadMealDetail(${meal.data})" class="btn btn-outline-dark">More Details</a></p>
+                <h5 class="card-title">${phone.phone_name}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${phone.brand}</h6>
+                <p><a onclick="loadPhoneDetail(${phone.data})" class="btn btn-outline-dark">More Details</a></p>
                 
             </div>
         </div>
@@ -58,30 +58,30 @@ const displaySearchResult = data => {
       })
 }
 
-const loadMealDetail = mealId => {
+const loadPhoneDetail = phoneId => {
       const url = `https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089`;
       fetch(url)
             .then(res => res.json())
-            .then(data => displayMealDetail(data.data));
+            .then(data => displayPhoneDetail(data.data));
 }
 
-const displayMealDetail = meal => {
+const displayPhoneDetail = phone => {
       // console.log(meal);
-      const mealDetails = document.getElementById('meal-details');
+      const phoneDetails = document.getElementById('phone-details');
       const div = document.createElement('div');
       div.classList.add('card');
       div.innerHTML = `
    
     <div class="card-body ">
-    <img src="${meal.image}" class="card-img-top my-2 " alt="...">
-        <h5 class="card-title">${meal.name}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">${meal.brand}</h6>
-        <p class="card-text">${meal.slug}</p>
-        <p class="card-text"><b>Sensors:</b> ${meal.mainFeatures.sensors}</p>
-        <p class="card-text"><b>Release Date:</b> ${meal.releaseDate}</p>
-        <p class="card-text"><b>Bluetooth:</b> ${meal.others.Bluetooth}</p>
+    <img src="${phone.image}" class="card-img-top my-2 " alt="...">
+        <h5 class="card-title">${phone.name}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${phone.brand}</h6>
+        <p class="card-text">${phone.slug}</p>
+        <p class="card-text"><b>Sensors:</b> ${phone.mainFeatures.sensors}</p>
+        <p class="card-text"><b>Release Date:</b> ${phone.releaseDate}</p>
+        <p class="card-text"><b>Bluetooth:</b> ${phone.others.Bluetooth}</p>
        
     </div>
     `;
-      mealDetails.appendChild(div);
+      phoneDetails.appendChild(div);
 }
