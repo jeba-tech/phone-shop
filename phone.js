@@ -66,7 +66,7 @@ const loadPhoneDetail = phoneId => {
 }
 
 const displayPhoneDetail = phone => {
-      // console.log(meal);
+      // console.log(phone);
       const phoneDetails = document.getElementById('phone-details');
       const div = document.createElement('div');
       div.classList.add('card');
