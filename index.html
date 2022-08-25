@@ -10,21 +10,25 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body class="bg-secondary">
-      <h2 class="text-center mt-3">Phone Shop</h2>
+<body style="background-color: white;">
+      <h2 class="text-center mt-3 fw-bold"><span style="color:rgb(170, 91, 209);">Phone</span> Shop</h2>
       <!--  search area -->
       <div class="input-group mb-3 w-50 mx-auto bg-dark mt-4 text-light">
-            <input id="search-field" type="text" class="form-control" placeholder="Search phone which you want to see"
+            <input id="search-field" type="text"
+                  style="background-color: rgb(232, 232, 232);border: 1px solid rgb(170, 91, 209);"
+                  class="form-control  " placeholder="Search phone which you want to see"
                   aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button onclick="searchPhone()" class="btn btn-outline-secondary" type="button"
-                  id="button-search">Search</button>
+            <button onclick="searchPhone()" style="background-color: rgb(223, 200, 200);"
+                  class="btn btn-outline-secondary" type="button" id="button-search ">Search</button>
       </div>
       <div>
-            <p id="error-message" class=" text-center fs-5 fw-bold text-light">Sorry! Your desired phone is not found
+            <p id="error-message" style="color: rgb(161, 1, 1);" class=" text-center fs-5 fw-bold ">Sorry! Your
+                  desired phone is not found
             </p>
       </div>
       <div>
-            <p id="request-message" class=" text-center fs-5 fw-bold text-light">Please write something to display
+            <p id="request-message" style="color: rgb(2, 102, 2);" class=" text-center fs-5 fw-bold">Please write
+                  something to display
             </p>
       </div>
 

@@ -76,9 +76,10 @@ const displayPhoneDetail = phone => {
     <img src="${phone.image}" class="card-img-top my-2 " alt="...">
         <h5 class="card-title">${phone.name}</h5>
         <h6 class="card-subtitle mb-2 text-muted">${phone.brand}</h6>
+     
         <p class="card-text">${phone.slug}</p>
         <p class="card-text"><b>Sensors:</b> ${phone.mainFeatures.sensors}</p>
-        <p class="card-text"><b>Release Date:</b> ${phone.releaseDate}</p>
+        <p class="card-text"><b>Release Date:</b>  ${phone.releaseDate ? phone.releaseDate : 'release date note found'}</p>
         <p class="card-text"><b>Bluetooth:</b> ${phone.others.Bluetooth}</p>
        
     </div>
