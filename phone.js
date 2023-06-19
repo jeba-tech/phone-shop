@@ -1,3 +1,17 @@
+//search box click on keyboard enter
+
+const searchButtonKey = document.getElementById('button-search');
+const searchInput = document.getElementById('search-field');
+
+searchInput,addEventListener("keypress",function(event){
+     
+      if(event.key == "Enter"){
+            searchButtonKey.click();  
+      }
+
+});
+
+/////////////////////
 // let cardCounter = 9;
 // const showMoreBtn = document.getElementById("load-more-button");
 document.getElementById('error-message').style.display = 'none';
